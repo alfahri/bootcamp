@@ -1,0 +1,1 @@
+SELECT user.*, COUNT(skill.id_user) as x FROM user INNER JOIN skill ON skill.id_user = user.id GROUP BY user.id

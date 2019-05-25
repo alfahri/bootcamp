@@ -1,0 +1,42 @@
+body {
+  font-family: 'Raleway';
+  background-color: #373836;
+  overflow: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  border-radius: 5px;
+  background-color: #456990;
+  text-align: center;
+  -webkit-border-radius: 6px 6px 6px 6px;
+  -moz-border-radius: 6px 6px 6px 6px;
+  border-radius: 6px 6px 6px 6px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.navbar.color-change {
+  background-color: #F00;
+  height: 50px;
+  color: rgba(255,254,255,0.8);
+}
+.navbar strong {
+  font-size: 2em;
+  width: 250px;
+  line-height: 70px;
+}
+.notice {
+  text-align: center;
+  color: #fff;
+}
+.white-content {
+  height: 150vh;
+}
