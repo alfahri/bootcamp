@@ -1,13 +1,15 @@
 <?php
-    function badenPowel($kalimatnya)
-    {
-        $data = substr_count($kalimatnya, 'a')+substr_count($kalimatnya, 'i')+substr_count($kalimatnya, 'u')+substr_count($kalimatnya, 'e')+substr_count($kalimatnya, 'o');
 
-        return $data;
+function piramida_terbalik($isi){
+  for ($i=1; $i<=$isi; $i++){
+    echo "<center>";
+    for ($d=$i; $d<=$isi; $d++) {
+      echo "*";
     }
+    echo "<br />";
+  }
+}
 
-    $kalimatnya = "software engginerring";
-    $result = badenPowel($kalimatnya);
+piramida_terbalik("9");
 
-    echo $result;
- ?>
+?>

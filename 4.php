@@ -1,40 +1,14 @@
 <?php
-$a = 9;
-function persegi($a){
-    $startNum = rand(1,10);
-    $endNum = 0;
 
-    for ($i = 0; $i < $startNum; $i++)
-    {
-      $endNum += $startNum;
-    }
-
-    $sisi = $a;
-
-    for($i=0; $i<$sisi; $i++)
-    {
-        for($j=0; $j<$sisi; $j++)
-        {
-            if($i==0 || $i==$sisi-1)
-            {
-                echo "x";
-            }
-            else
-            {
-                if($j==0 || $j==$sisi-1)
-                {
-                    echo "=";
-                }
-                else
-                {
-                    echo "x";
-                }
-            }
-        }
-        echo "<br />";
-    }
+function hitung_pohon($tinggi_awal, $tahun){
+  $musim_semi = $tinggi_awal + 1 * $tahun;
+  $musim_panas = $musim_semi * 3 * $tahun;
+  $musim_gugur = $musim_panas - 1.5 * $tahun;
+  $musim_dingin = $musim_gugur * 15 / 100 * $tahun;
+  $akhir_musim_dingin = $musim_dingin / 2 * $tahun;
+  echo $akhir_musim_dingin;
 }
 
-echo persegi($a);
+hitung_pohon("2", "2");
 
 ?>

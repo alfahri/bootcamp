@@ -1,25 +1,54 @@
 <?php
 
-function betweenDays($ba, $bi)
+function is_email_valid($email){
+  if (preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", trim($email))) {
+    return TRUE;
+  }
+  return FALSE;
+}
+
+function phone($input_phone)
 {
-        $waktu_sekarang = strtotime($bi);
+  $cek_phone = preg_match('/^[+]62/', $input_phone);
 
-        $tanggalpertama = strtotime($ba);
-        $diff = $waktu_sekarang - $tanggalpertama;
+  if($cek_phone == true) {
+    echo "return true";
+  }
 
-        // Bulatkan diff dengan menggunakan function round
-        $round = round($diff / (60 * 60 * 24));
+  else {
+    echo "return false";
+  }
+}
 
-        //lakukan perulangan untuk menyelisih tanggal pertama dan tanggal kedua
-        for($i= 1; $i<=$round; $i++)
-        {
-            $result = date('d-m-Y',strtotime($ba. "+".$i." days")-1);
-            echo "'".$result.",'";
-        }
-        echo $bi."'";
-    }
+function cek_username($username){
+  if (ctype_lower($username)) {
+    echo "String berisi huruf kecil\n";
+  } else {
+    echo "Tidak semua string berisi huruf kecil\n";
+  }
+}
 
-    $hasil = betweenDays("20-05-2019","25-05-2019");
-    echo $hasil;
+function password($input_password)
+{
+  $cek_password = preg_match('/([A-Z][a-z][0-9][!\@\$\%\^\&]#)/', $input_password);
+
+  if($cek_password == true) {
+    echo "return true";
+  }
+
+  else {
+    echo "return false";
+  }
+}
+
+cek_username("anjay");
+
+val_no_telp("+6282246101501");
+
+$email = "abc@gmail.com";
+$valid = is_email_valid($email);
+echo $valid ? "True" : "False";
+
+password("asdasd#");
 
 ?>
